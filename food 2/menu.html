@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./navbar.css">
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <img
+                src="./icons8-restaurant-100.png">
+            <div id=""><input><span class="material-icons " id="search">
+                    search
+                </span></div>
+            <div id="menu"><a href="menu.html">Menu</a></div>
+            <div id="cart"><a href="cart.html">Cart</a></div>
+        </div>
+        <div id="foodbox">
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    async function show() {
+        let res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=beef`)
+        let data = await res.json()
+        append(data.meals)
+        console.log(data.meals)
+    }
+    function append(data) {
+        data.forEach(el => {
+
+
+            var div = document.createElement("div");
+            var img = document.createElement("img");
+            img.src = el.strMealThumb;
+            var h4 = document.createElement("h4");
+            var p1 = document.createElement("h4");
+            p1.innerHTML = "Price" + " " + el.idMeal;
+            var addbutton = document.createElement("button");
+            addbutton.setAttribute("id", "add")
+            addbutton.onclick = () => {
+                alert(el.strMeal);
+                if (localStorage.getItem("foodcart") == null) {
+                    localStorage.setItem("foodcart", JSON.stringify([]))
+                }
+                var foodcart = JSON.parse(localStorage.getItem("foodcart"));
+                foodcart.push(el);
+                localStorage.setItem("foodcart", JSON.stringify(foodcart))
+            }
+            addbutton.innerHTML = "Add to cart"
+            h4.innerHTML = el.strMeal;
+            div.append(img, h4, p1, addbutton);
+            var foodbox = document.getElementById("foodbox");
+            foodbox.append(div)
+        });
+
+    }
+    show()
+</script>

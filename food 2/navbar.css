@@ -1,0 +1,120 @@
+#navbar {
+    display: flex;
+    height: 69px;
+}
+
+input {
+    width: 350px;
+    margin-left: 150px;
+    height: 22px;
+    margin-top: 20px;
+}
+
+#search {
+    border: solid;
+    background-color: red;
+    vertical-align: bottom;
+    padding-top: 4px;
+    border : none;
+    padding: 4px;
+    margin-top: 10px;
+    border-radius:80px;
+    margin-left: 10px;
+    border:1px solid rgb(87, 39, 39)
+}
+
+#menu {
+    color: brown;
+
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 180px;
+    
+}
+
+#Login {
+    color: brown;
+
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+#navbar {
+    width: 100%;
+    background-color: rgb(255,0,0);
+    
+}
+
+#foodbox {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 5%;
+    margin-top: 80px;
+    margin-left: 55px;
+}
+
+#foodbox>div>img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+#cart {
+    color: black;
+
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+#logo{
+height: 68px;
+
+}
+#search:hover{
+    background-color:black;
+    color:white;
+}
+a{
+    text-decoration:
+    none;
+    color:black;
+    font-family: 'Ubuntu', sans-serif;;
+    font-weight: bold;
+    margin-left:80px;
+}
+input:focus{
+    background-color:rgba(48, 8, 8, 0.479);
+    color: white;
+}
+#add{
+    border: solid;
+    background-color: red;
+    vertical-align: bottom;
+    padding-top: 4px;
+    border : none;
+    padding: 4px;
+    margin-top: 10px;
+    border-radius:80px;
+    margin-left: 10px;
+    border:1px solid rgb(87, 39, 39)
+}
+#add:hover{
+    background-color:black;
+    color:white;
+}
+#checkbtn{
+    border: solid;
+    background-color: red;
+    vertical-align: bottom;
+    padding-top: 4px;
+    border : none;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius:80px;
+    margin-left: 50px;
+    border:1px solid rgb(87, 39, 39)
+}
+#checkbtn:hover{
+    background-color:black;
+    color:white;
+}
